@@ -41,6 +41,7 @@ define([
                 success: function () {
                     self.model.incrementAddedCount();
                     self.model.save();
+                    self.hideValidationErrors();
                     self.authorInput.val('');
                     self.textInput.val('');
                 },
@@ -52,6 +53,9 @@ define([
         showValidationErrors: function (errors) {
             //Should display each of the array elements. Omitted for simplicity.
             $('#message-validation-error').html(errors[0]);
+        },
+        hideValidationErrors: function () {
+            $('#message-validation-error').html('');
         },
         onMessageAdded: function(message) {
             var messageView = new MessageView({model: message});
