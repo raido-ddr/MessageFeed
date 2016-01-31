@@ -32,7 +32,10 @@ define([
             var removedMessagesCount = model.get('removedMessagesCount');
             $('#removed-messages-count').html(removedMessagesCount);
         },
-        onSubmitBtnClicked: function () {
+        onSubmitBtnClicked: function (e) {
+            //Prevents the page from reloading
+            e.preventDefault();
+
             var self = this;
             messageList.create(this.newMessageData(), {
                 success: function () {
