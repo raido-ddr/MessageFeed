@@ -60,28 +60,7 @@
     </footer>
 </section>
 
-<!-- Message item template -->
-
-<script type="text/template" id="message-template">
-    <div class="message">
-        <div class="pure-u-1">
-            <p class="message-author"><%- messageAuthor %></p>
-            <div class="message-text-container">
-                <p class="message-text pure-u-20-24"><%- messageText %></p>
-                <div class="remove-btn-container pure-u-2-24">
-                    <button class="remove-btn" />
-                </div>
-            </div>
-            <p class="message-datetime"><%- time %></p>
-        </div>
-    </div>
-</script>
-
-<script src="lib/jquery.min.js" type="text/javascript"></script>
-<script src="lib/underscore-min.js" type="text/javascript"></script>
-<script src="lib/backbone-min.js" type="text/javascript"></script>
-<script src="lib/backbone.localStorage-min.js" type="text/javascript"></script>
-<script src="js/message-feed.min.js"></script>
+<script data-main="js/main" src="js/lib/require-min.js"></script>
 
 </body>
 </html>
