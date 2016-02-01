@@ -8,7 +8,7 @@ define([
     'use strict';
 
     var ApplicationView = Backbone.View.extend({
-        el: '#app-container',
+        el: 'main',
         initialize: function(model) {
             this.model = model;
             this.authorInput = this.$('#message-author-input');
