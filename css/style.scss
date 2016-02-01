@@ -1,0 +1,168 @@
+$headerFont: bold italic 1.8em Georgia, serif;
+$primaryFont: 1em "Times New Roman", Times, serif black;
+$smallFont: italic 0.6em sans-serif;
+$footerFont: bolder italic  0.9em  Georgia, serif;
+
+$whitesmokeColor: #F5F5F5;
+$lightGreyColor: #cad2d3;
+$darkGreyColor: #999999;
+$shadowColor: #808080;
+$lightBlueColor: #27d4ea;
+$blueColor: #7481DE;
+$brightBlueColor: #1071ea;
+$darkBlueColor: #0000FF;
+
+$removeBtnBackground: url(../images/remove_btn.png) no-repeat;
+$submitBtnBackground: $lightBlueColor url(../images/submit-message-btn.png) no-repeat;
+
+$iconWidth: 2em;
+$iconHeight: 2em;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  box-sizing: $sizing;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+header {
+  padding: 0.5em;
+  background-color: $brightBlueColor;
+  text-align: right;
+  font: $headerFont;
+  color: $whitesmokeColor;
+}
+
+main {
+  height: 100%;
+  min-width: 100%;
+}
+
+footer {
+  height: 5em;
+  margin: 0 auto 0 0;
+  background-color: $brightBlueColor;
+}
+
+#app-content {
+  margin: 0em 2em 0em;
+  /*
+  Workaround used to stick footer to the bottom
+  */
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  background: linear-gradient($darkGreyColor, $lightGreyColor);
+  box-shadow: 0 0.25em 0.4em 0 grey, 0 0.4em 1.3em 0 grey;
+}
+
+#message-form {
+  margin: 1em 1em 1.2em;
+  padding: 1em 1em 0.3em;
+  background: radial-gradient($lightBlueColor, $brightBlueColor);
+  @include border-radius(0.313em);
+}
+
+#submit-message-btn {
+  width: 2em;
+  height: 2em;
+  background: $submitBtnBackground;
+  @include border-radius(50%);
+}
+
+#message-feed {
+  margin: 1em 1em 1em 1.2em;
+  background: $whitesmokeColor;
+  @include border-radius(0.313em);
+}
+
+#message-list {
+  padding: 0em;
+}
+
+.pure-g > div {
+  @include box-sizing(border-box);
+}
+
+.form-element {
+  margin: 0.2em;
+}
+
+.message-item {
+  position: relative;
+  margin: 0.5em 0.5em 0.5em 1.5em;
+  padding: 0.5em;
+  @include border-radius(0.313em);
+  @include box-sizing(border-box);
+  overflow-wrap: break-word;
+}
+
+.message-author {
+  margin: 0.3em 0.3em 0em 2em;
+  font: $smallFont;
+}
+
+.message-text-container {
+  background-color: $blueColor;
+  border: solid 0.0625em $darkBlueColor;
+  @include border-radius(0.313em);
+}
+
+.message-text {
+  margin: 0.3em;
+  padding: 1em 0.3em;
+  font: $primaryFont;
+}
+
+.message-datetime {
+  text-align: right;
+  font: $smallFont;
+}
+
+.remove-btn {
+  width: $iconWidth;
+  height: $iconHeight;
+  background: $removeBtnBackground;
+  @include border-radius(50%);
+}
+
+.remove-btn-container {
+  float: right;
+  vertical-align: middle;
+  margin: 1.5em auto auto;
+  height: 100%;
+}
+
+.counter-container {
+  margin: 1em;
+  color: $whitesmokeColor;
+  p {
+    float: left;
+    font: $footerFont;
+  }
+}
+
+.push {
+  height: 5em;
+}
+
+.clear {
+  clear: both;
+}
