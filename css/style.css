@@ -46,7 +46,7 @@ footer {
 #submit-message-btn {
   width: 2em;
   height: 2em;
-  background: #27d4ea url(../images/submit-message-btn.png) no-repeat;
+  background: #27d4ea url(../images/sprite-icons.png) 0 -2em;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -108,7 +108,7 @@ footer {
 .remove-btn {
   width: 2em;
   height: 2em;
-  background: url(../images/remove_btn.png) no-repeat;
+  background: url(../images/sprite-icons.png) 0 0;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;

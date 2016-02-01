@@ -12,8 +12,8 @@ $blueColor: #7481DE;
 $brightBlueColor: #1071ea;
 $darkBlueColor: #0000FF;
 
-$removeBtnBackground: url(../images/remove_btn.png) no-repeat;
-$submitBtnBackground: $lightBlueColor url(../images/submit-message-btn.png) no-repeat;
+$removeBtnBackground: url(../images/sprite-icons.png) 0 0;
+$submitBtnBackground: $lightBlueColor url(../images/sprite-icons.png) 0 -2em;
 
 $iconWidth: 2em;
 $iconHeight: 2em;
